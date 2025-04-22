@@ -50,13 +50,6 @@
             --gradient-alt: linear-gradient(45deg, var(--secondary-alt), var(--accent-alt));
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            cursor: none;
-        }
-        
         body {
             font-family: 'Outfit', sans-serif;
             background-color: var(--background);
@@ -69,46 +62,15 @@
             color: var(--primary);
         }
         
-        .custom-cursor {
-            position: fixed;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: var(--secondary);
-            pointer-events: none;
-            z-index: 9999;
-            transform: translate(-50%, -50%);
-            transition: transform 0.1s ease;
-            mix-blend-mode: difference;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: default;
         }
-        
-        .custom-cursor-follower {
-            position: fixed;
-            width: 50px;
-            height: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 9998;
-            transform: translate(-50%, -50%);
-            transition: width 0.3s, height 0.3s, border 0.3s;
-        }
-        
-        .custom-cursor.active {
-            transform: translate(-50%, -50%) scale(0.7);
-        }
-        
-        .custom-cursor-follower.active {
-            width: 60px;
-            height: 60px;
-            border-color: var(--secondary);
-        }
-        
-        .custom-cursor.link-hover, 
-        .custom-cursor.btn-hover {
-            transform: translate(-50%, -50%) scale(1.5);
-            background-color: transparent;
-            border: 1px solid var(--secondary);
+
+        a, button, .btn {
+            cursor: pointer;
         }
         
         .loader {
