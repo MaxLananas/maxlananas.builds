@@ -3,60 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>404 - Page Not Found</title>
+  <title>404 - Lost in the Blocks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Rubik&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      background-color: #1d1d1d;
-      color: #f0f0f0;
-      font-family: 'Courier New', monospace;
+      font-family: 'Rubik', sans-serif;
+      background: url('https://i.imgur.com/8Km9tLL.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       text-align: center;
-      padding: 50px;
+      backdrop-filter: blur(5px);
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 600px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+      animation: fadeIn 1s ease-in-out;
     }
 
     h1 {
-      font-size: 3em;
-      color: #ff5555;
+      font-family: 'Orbitron', sans-serif;
+      font-size: 4em;
+      margin-bottom: 10px;
+      color: #00ffcc;
     }
 
     p {
-      font-size: 1.2em;
-      margin-top: 20px;
-    }
-
-    .block {
-      font-size: 5em;
-      animation: bounce 1.5s infinite;
+      font-size: 1.3em;
+      margin-bottom: 20px;
+      color: #ddd;
     }
 
     a {
       display: inline-block;
-      margin-top: 30px;
-      padding: 10px 20px;
-      background-color: #2ecc71;
-      color: #fff;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background-color: #00ffcc;
+      color: #000;
+      border-radius: 8px;
       text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease;
+      font-weight: bold;
+      transition: background 0.3s ease;
     }
 
     a:hover {
-      background-color: #27ae60;
+      background-color: #00ddb3;
     }
 
-    @keyframes bounce {
-      0%, 100% {
-        transform: translateY(0);
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 {
+        font-size: 2.5em;
       }
-      50% {
-        transform: translateY(-15px);
+
+      p {
+        font-size: 1.1em;
       }
     }
   </style>
 </head>
 <body>
-  <div class="block">🧱</div>
-  <h1>404 - Block not found!</h1>
-  <p>Oops! Looks like this chunk hasn’t been loaded yet... 😅</p>
-  <a href="/">⬅️ Back to Home</a>
+  <div class="container">
+    <h1>404</h1>
+    <p>You’ve hit a block that doesn’t exist 🧱</p>
+    <p>Looks like you’re lost in the world of Maxlananas...</p>
+    <a href="/">⬅ Back to the main world</a>
+  </div>
 </body>
 </html>
